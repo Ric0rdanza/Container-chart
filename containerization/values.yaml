@@ -40,7 +40,7 @@ service:
   type: LoadBalancer
   port: 443
   tport: 443
-  clusterIP: 10.120.14.10
+  clusterIP: 10.120.14.20
 
 ingress:
   enabled: false
