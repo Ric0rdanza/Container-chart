@@ -17,7 +17,7 @@ parser = reqparse.RequestParser()
 parser.add_argument("username", location = "form")
 parser.add_argument("password", location = "form")
 
-dbhost = "10.124.100.4"
+dbhost = "10.124.14.4"
 
 def encode(json):
     token = jwt.encode(json, secret, algorithm = "HS256")
