@@ -3,7 +3,7 @@ entries:
   containerization:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-01-31T20:15:29.20721+01:00"
+    created: "2023-01-31T20:26:38.490712+01:00"
     dependencies:
     - name: main
       repository: file://charts/main
@@ -15,10 +15,10 @@ entries:
       repository: file://charts/auth
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: ef2c55f01a3b9726cf0729bb26b6ecbe3747211f61b80476ccf2cd707a55b2b3
+    digest: 1ce7c6bfe386caaeffe1f66fc5846dc074c197c4e77dec3c6aded1e7a3fe0365
     name: containerization
     type: application
     urls:
     - https://ric0rdanza.github.io/Container-chart/containerization-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-31T20:15:29.205399+01:00"
+generated: "2023-01-31T20:26:38.486916+01:00"

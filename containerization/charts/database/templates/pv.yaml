@@ -11,7 +11,7 @@ spec:
   capacity:
     storage: 5Gi
   hostPath:
-    path: /var/lib/posgresql/data
+    path: "/var/lib/postgresql/data/pgdata"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
