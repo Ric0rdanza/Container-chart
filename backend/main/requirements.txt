@@ -1,0 +1,8 @@
+gunicorn
+gevent
+flask
+flask-restful
+flask-cors
+requests
+base-62
+psycopg2

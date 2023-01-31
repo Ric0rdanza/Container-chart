@@ -8,7 +8,7 @@ image:
   repository: odonataprime/shortener
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "gke"
 
 imagePullSecrets: []
 nameOverride: "main-app"
@@ -39,7 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 8000
-  clusterIP: 10.106.44.02
+  clusterIP: 10.124.0.2
   tport: 5002
 
 ingress:

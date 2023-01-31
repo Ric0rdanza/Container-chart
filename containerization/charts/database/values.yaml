@@ -39,8 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 5432
-  clusterIP: 10.106.44.03
-
+  clusterIP: 10.124.0.4
 ingress:
   enabled: false
   className: ""
