@@ -1,0 +1,12 @@
+dependencies:
+- name: main
+  repository: file://charts/main
+  version: 0.1.0
+- name: database
+  repository: file://charts/database
+  version: 0.1.0
+- name: auth
+  repository: file://charts/auth
+  version: 0.1.0
+digest: sha256:439a5211092fb81780fd071c7bca9759b1622efd1b1f1d2d67a66a3df03e205e
+generated: "2023-01-29T11:01:22.979923+01:00"
