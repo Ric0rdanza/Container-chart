@@ -1,2 +1,2 @@
 # Container-chart
-Helm chart for containerisation
+Helm chart for software containerization
