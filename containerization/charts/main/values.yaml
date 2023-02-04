@@ -39,7 +39,7 @@ securityContext: {}
 sessionAffinity: ClientIP
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 5002
   clusterIP: 10.12.13.42
   tport: 8000
