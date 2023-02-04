@@ -9,7 +9,7 @@ spec:
   policyTypes:
   - Egress
   egress:
-  - to ports:
+  - to port:
     - port: 5001
       protocol: TCP
     - port: 5002
