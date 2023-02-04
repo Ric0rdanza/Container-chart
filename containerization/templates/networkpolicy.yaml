@@ -10,4 +10,5 @@ spec:
   - Egress
   egress:
   - to:
-    - ipBlock: 10.12.13.44/32
+    - ipBlock:
+        cidr: 10.12.13.44/32
