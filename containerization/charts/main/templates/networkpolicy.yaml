@@ -5,7 +5,7 @@ metadata:
 spec:
   podSelector: 
     matchLabels:
-      name: server-app
+      name: main-app
   policyTypes:
   - Egress
   egress:
