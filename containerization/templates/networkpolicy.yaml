@@ -9,6 +9,11 @@ spec:
   policyTypes:
   - Egress
   egress:
+  - to ports:
+    - port: 5001
+      protocol: TCP
+    - port: 5002
+      protocol: TCP
   - to:
     - ipBlock:
         cidr: 10.12.0.0/20
