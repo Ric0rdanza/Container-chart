@@ -4,32 +4,7 @@ metadata:
   name: block-internet-database
 spec:
   podSelector: 
-    matchLabels:
-      name: database
+    matchLabels: {}
   policyTypes:
     - Egress
     - Ingress
----
-kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: block-internet-database
-spec:
-  podSelector: 
-    matchLabels:
-      name: database
-  policyTypes:
-    - Egress
-    - Ingress
-  egress:
-  - to:
-    - ipBlock:
-        cidr: 10.12.0.0/20
-        except:
-        - 10.12.13.40/32
-  ingress:
-  - from:
-    - ipBlock:
-        cidr: 10.12.0.0/20
-        except:
-        - 10.12.13.40/32
