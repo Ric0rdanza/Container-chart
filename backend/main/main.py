@@ -14,7 +14,9 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-dbhost = "10.12.13.34"
+dbhost = "10.12.13.44"
+authverify = "http://10.12.13.43:5001/verify"
+
 
 def db_connect():
 	conn = psycopg2.connect(database="postgresdb", user="postgresadmin", password="zxcZXC123", host=dbhost)
@@ -146,7 +148,7 @@ def is_url(candidate):
 # Send a request to login server to varify that token is correct
 def is_token_valid(token):
 	data = {"Authorization": token}
-	username = requests.post("http://10.106.44.01:5001/verify", headers = data)
+	username = requests.post(authverify, headers = data)
 	if username.status_code == 200:
 		uid = username.text
 		return uid

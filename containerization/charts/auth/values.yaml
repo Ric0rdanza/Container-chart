@@ -42,7 +42,7 @@ service:
   type: ClusterIP
   port: 5001
   tport: 8000
-  clusterIP: 10.12.13.33
+  clusterIP: 10.12.13.43
   
 
 ingress:

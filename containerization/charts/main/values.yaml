@@ -41,7 +41,7 @@ sessionAffinity: ClientIP
 service:
   type: LoadBalancer
   port: 5002
-  clusterIP: 10.12.13.32
+  clusterIP: 10.12.13.42
   tport: 8000
 
 ingress:
