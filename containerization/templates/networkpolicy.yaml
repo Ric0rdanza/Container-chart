@@ -5,7 +5,7 @@ metadata:
 spec:
   podSelector: 
     matchLabels:
-      app: app.kubernetes.io/name=server-app
+      name: server-app
   policyTypes:
   - Egress
   egress:
