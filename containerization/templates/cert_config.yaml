@@ -37,7 +37,7 @@ spec:
   isCA: false
   usages:
     - server auth
-    - server main
+    - client auth
   dnsNames:
     - my.container.local
   issuerRef:
