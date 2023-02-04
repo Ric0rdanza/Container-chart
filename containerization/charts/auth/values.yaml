@@ -41,7 +41,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 8000
-  clusterIP: 10.12.14.3
+  clusterIP: 10.12.14.13
   tport: 5001
 
 ingress:

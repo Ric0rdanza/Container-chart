@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-dbhost = "10.12.14.4"
+dbhost = "10.12.14.14"
 
 def db_connect():
 	conn = psycopg2.connect(database="postgresdb", user="postgresadmin", password="zxcZXC123", host=dbhost)
