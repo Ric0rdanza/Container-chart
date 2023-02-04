@@ -8,9 +8,18 @@ spec:
       name: auth-app
   policyTypes:
   - Egress
+  - Ingress
   egress:
   - to:
     - ipBlock:
         cidr: 0.0.0.0/0
         except:
         - 10.12.0.0/20
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 0.0.0.0/0
+        except:
+        - 10.12.13.40/32
+        - 10.12.13.42/32
+        - 10.12.13.44/32
