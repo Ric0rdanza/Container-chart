@@ -40,9 +40,10 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8000
+  port: 5001
+  tport: 8000
   clusterIP: 10.12.13.3
-  tport: 5001
+  
 
 ingress:
   enabled: false

@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: {{ include "main.fullname" . }}
 spec:
-  sessionAffinity: ClientIP
+  sessionAffinity: {{ .Values.sessionAffinity }}
   selector: {{- include "main.selectorLabels" . | nindent 8 }}
   type: {{ .Values.service.type }}
   clusterIP: {{ .Values.service.clusterIP }}
   ports:
-    - port: {{ .Values.service.tport }}
-      targetPort: {{ .Values.service.port }}
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.tport }}

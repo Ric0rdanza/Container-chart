@@ -36,11 +36,13 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+sessionAffinity: ClientIP
+
 service:
   type: ClusterIP
-  port: 8000
+  port: 5002
   clusterIP: 10.12.13.2
-  tport: 5002
+  tport: 8000
 
 ingress:
   enabled: false
