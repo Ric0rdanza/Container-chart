@@ -39,7 +39,7 @@ spec:
     - server auth
     - client auth
   dnsNames:
-    - my.containter.local
+    - my.container.local
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
