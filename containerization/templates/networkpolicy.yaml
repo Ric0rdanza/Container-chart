@@ -1,0 +1,13 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: block-database
+spec:
+  podSelector: 
+    matchLabels:
+      name: server-app
+  policyTypes:
+  - Egress
+  egress:
+  - to:
+    - ipBlock: 10.12.13.44/32
