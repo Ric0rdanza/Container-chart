@@ -40,6 +40,15 @@ spec:
     - client auth
   dnsNames:
     - my.container.local
+  uris:
+    - https://my.container.local/auth
+      https://my.container.local/index
+      https://my.container.local/create_account
+      https://my.container.local/main
+      https://my.container.local/auth/users
+      https://my.container.local/auth/users/login
+      https://my.container.local/auth/verify
+      https://my.container.local/main/*
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
