@@ -13,10 +13,5 @@ spec:
       - ipBlock:
           cidr: 0.0.0.0/0
           except:
-          - 10.12.13.42/32
-          - 10.12.13.43/32
-      ports:
-        - port: 5001
-          protocol: TCP
-        - port: 5002
-          protocol: TCP
+            - 10.12.13.42/32
+            - 10.12.13.43/32
