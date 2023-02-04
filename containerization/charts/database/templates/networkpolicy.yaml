@@ -1,25 +1,10 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: allow-pods-database
+  name: block-internet-database
 spec:
   podSelector: 
     matchLabels: {}
   policyTypes:
     - Egress
     - Ingress
-  egress:
-  - to:
-    - podSelector: 
-        matchLabels:
-          name: chart-database
-    - ipBlock:
-        cidr: 10.12.0.0/20
-        except:
-        - 10.12.13.40/32
-  ingress:
-  - from:
-    - ipBlock:
-        cidr: 10.12.0.0/20
-        except:
-        - 10.12.13.40/32
