@@ -14,8 +14,6 @@ imagePullSecrets: []
 nameOverride: "auth-app"
 fullnameOverride: "auth-chart"
 
-role: auth
-
 sessionAffinity: ClientIP
 
 serviceAccount:
