@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "auth.fullname" . }}
   labels: 
-    - role: auth
+    - role: {{ .Values.role }}
 spec:
   replicas: 1
   selector: 
