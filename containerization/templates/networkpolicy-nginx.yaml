@@ -13,11 +13,7 @@ spec:
   - to:
     - ipBlock:
         cidr: 0.0.0.0/0
-        except: 
-          - 10.12.13.44/32
   ingress:
   - from:
     - ipBlock:
         cidr: 0.0.0.0/0
-        except: 
-          - 10.12.13.44/32
