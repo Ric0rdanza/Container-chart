@@ -14,6 +14,8 @@ imagePullSecrets: []
 nameOverride: "server-app"
 fullnameOverride: "server-chart"
 
+app:  nginx-chart
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
@@ -37,10 +39,19 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  name: https
   type: ClusterIP
+  protocol: TCP
   port: 443
   tport: 443
   clusterIP: 10.12.13.40
+
+
+volume:
+  name: demoapi-secret
+  mountPath: /opt/certs
+  readOnly: true
+  secretName: temp-demoapi-tls-secret
 
 ingress:
   enabled: false

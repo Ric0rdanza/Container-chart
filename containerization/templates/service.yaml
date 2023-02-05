@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "containerization.fullname" . }}
   labels: 
-    app: nginx-chart
+    app: {{ .Values.app }}
 spec:
   type: {{ .Values.service.type }}
   clusterIP: {{ .Values.service.clusterIP }}
@@ -11,4 +11,4 @@ spec:
     - port: {{ .Values.service.tport }}
       targetPort: {{ .Values.service.port }}
   selector: 
-    app: nginx-chart
+    app: {{ .Values.app }}
