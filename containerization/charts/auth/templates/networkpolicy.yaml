@@ -12,8 +12,8 @@ spec:
   egress:
   - to:
     - ipBlock:
-        cidr: 10.12.0.0/20
+        cidr: 10.8.0.0/20
   ingress:
   - from:
     - ipBlock:
-        cidr: 10.12.0.0/20
+        cidr: 10.8.0.0/20
