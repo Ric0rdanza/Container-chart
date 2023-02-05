@@ -4,7 +4,8 @@ metadata:
   name: open-pod-auth
 spec:
   podSelector: 
-    matchLabels: {}
+    matchLabels:
+      app: auth-chart
   policyTypes:
   - Egress
   - Ingress

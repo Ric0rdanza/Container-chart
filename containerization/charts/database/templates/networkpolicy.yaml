@@ -4,7 +4,8 @@ metadata:
   name: open-pod-database
 spec:
   podSelector: 
-    matchLabels: {}
+    matchLabels:
+      app: db-chart
   policyTypes:
     - Egress
     - Ingress
@@ -12,7 +13,7 @@ spec:
   - to:
     - podSelector: 
         matchLabels:
-          name: db-chart
+          app: db-chart
     - ipBlock:
         cidr: 10.12.0.0/20
         except:
@@ -21,7 +22,7 @@ spec:
   - from:
     - podSelector: 
         matchLabels:
-          name: db-chart
+          app: db-chart
     - ipBlock:
         cidr: 10.12.0.0/20
         except:
