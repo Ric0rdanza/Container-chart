@@ -46,7 +46,6 @@ def get_shorturl(long_url):
 # ownership: {username, shorturl}
 
 def db_create_shorturl(username, originalurl, shorturl):
-	print("Creating shorturl...", flush=True)
 	conn = db_connect()
 	cur = conn.cursor()
 	cur.execute("SELECT * FROM urls WHERE originalurl = \'%s\'" % (originalurl))
