@@ -8,7 +8,9 @@ spec:
     matchLabels: {{- include "auth.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      labels: {{- include "auth.selectorLabels" . | nindent 8 }, {"name": "auth-chart"}}
+      labels: 
+        - name: auth-chart
+        {{include "auth.selectorLabels" . | nindent 10 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
