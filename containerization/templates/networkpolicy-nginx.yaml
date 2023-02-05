@@ -15,7 +15,8 @@ spec:
           name: server-chart
     - ipBlock:
         cidr: 0.0.0.0/0
-        except: 10.12.13.44/32
+        except: 
+          - 10.12.13.44/32
   ingress:
   - from:
     - podSelector: 
@@ -23,4 +24,5 @@ spec:
           name: server-chart
     - ipBlock:
         cidr: 0.0.0.0/0
-        except: 10.12.13.44/32
+        except: 
+          - 10.12.13.44/32
