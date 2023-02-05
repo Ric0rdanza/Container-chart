@@ -5,11 +5,12 @@ metadata:
 spec:
   replicas: 1
   selector: 
-    matchLabels: {{- include "auth.selectorLabels" . | nindent 6 }}
+    matchLabels:
+      name: auth-chart
   template:
     metadata:
       labels: 
-        - name: auth-chart
+        name: auth-chart
     spec:
       containers:
         - name: {{ .Chart.Name }}
