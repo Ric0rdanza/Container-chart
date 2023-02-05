@@ -10,7 +10,6 @@ spec:
     metadata:
       labels: 
         - name: auth-chart
-        {{include "auth.selectorLabels" . | nindent 10 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
