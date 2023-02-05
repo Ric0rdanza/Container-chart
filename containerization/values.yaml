@@ -40,7 +40,7 @@ securityContext: {}
 
 service:
   name: https
-  type: ClusterIP
+  type: LoadBalancer
   protocol: TCP
   port: 443
   tport: 443
