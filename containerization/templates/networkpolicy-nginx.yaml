@@ -3,6 +3,9 @@ apiVersion: networking.k8s.io/v1
 metadata:
   name: open-public-nginx
 spec:
+  podSelector: 
+    matchLabels: 
+      name: nginx-chart
   policyTypes:
   - Egress
   - Ingress
