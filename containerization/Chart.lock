@@ -8,5 +8,8 @@ dependencies:
 - name: auth
   repository: file://charts/auth
   version: 0.1.0
-digest: sha256:439a5211092fb81780fd071c7bca9759b1622efd1b1f1d2d67a66a3df03e205e
-generated: "2023-01-29T11:01:22.979923+01:00"
+- name: main-canary
+  repository: file://charts/main-canary
+  version: 0.1.0
+digest: sha256:bc61f9d12176fe177d706e8c300cd802ae5bd1f49d59c0201f8da9fd63628b43
+generated: "2023-02-05T16:29:57.825533+01:00"
