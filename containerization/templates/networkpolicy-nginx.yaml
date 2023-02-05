@@ -5,24 +5,18 @@ metadata:
 spec:
   podSelector: 
     matchLabels: 
-      name: nginx-chart
+      app: nginx-chart
   policyTypes:
   - Egress
   - Ingress
   egress:
   - to:
-    - podSelector: 
-        matchLabels:
-          name: nginx-chart
     - ipBlock:
         cidr: 0.0.0.0/0
         except: 
           - 10.12.13.44/32
   ingress:
   - from:
-    - podSelector: 
-        matchLabels:
-          name: nginx-chart
     - ipBlock:
         cidr: 0.0.0.0/0
         except: 

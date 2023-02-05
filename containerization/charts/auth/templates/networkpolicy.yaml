@@ -11,15 +11,9 @@ spec:
   - Ingress
   egress:
   - to:
-    - podSelector: 
-        matchLabels:
-          app: auth-chart
     - ipBlock:
         cidr: 10.12.0.0/20
   ingress:
   - from:
-    - podSelector: 
-        matchLabels:
-          app: auth-chart
     - ipBlock:
         cidr: 10.12.0.0/20

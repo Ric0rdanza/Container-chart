@@ -11,18 +11,12 @@ spec:
     - Ingress
   egress:
   - to:
-    - podSelector: 
-        matchLabels:
-          app: db-chart
     - ipBlock:
         cidr: 10.12.0.0/20
         except:
         - 10.12.13.40/32
   ingress:
   - from:
-    - podSelector: 
-        matchLabels:
-          app: db-chart
     - ipBlock:
         cidr: 10.12.0.0/20
         except:
