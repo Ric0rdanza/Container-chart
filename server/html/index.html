@@ -57,12 +57,7 @@ function clearText(field)
                     retrieve_req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
                     retrieve_req.send()
                     var long_urls = JSON.parse(retrieve_req.response)
-                    if (long_urls.length > 1) {
-                        alert("This shortened URL are mapping to multiple longer URLs!\n\n" + long_urls)
-                    }
-                    else {
-                        alert(long_urls)
-                    }
+                    alert(long_urls)
                 }
             </script>
         	<div class="post_box">
