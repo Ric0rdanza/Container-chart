@@ -1,25 +1,24 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: block-internet-auth
+  name: open-pod-auth
 spec:
   podSelector: 
-    matchLabels:
-      name: auth-app
+    matchLabels: {}
   policyTypes:
   - Egress
   - Ingress
   egress:
   - to:
+    - podSelector: 
+        matchLabels:
+          name: auth-chart
     - ipBlock:
-        cidr: 0.0.0.0/0
-        except:
-        - 10.12.0.0/20
+        cidr: 10.12.0.0/20
   ingress:
   - from:
+    - podSelector: 
+        matchLabels:
+          name: auth-chart
     - ipBlock:
-        cidr: 0.0.0.0/0
-        except:
-        - 10.12.13.40/32
-        - 10.12.13.42/32
-        - 10.12.13.44/32
+        cidr: 10.12.0.0/20

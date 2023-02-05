@@ -1,25 +1,24 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: allow-internet-only
+  name: open-pod-main
 spec:
   podSelector: 
-    matchLabels:
-      name: main-app
+    matchLabels: {}
   policyTypes:
   - Egress
   - Ingress
   egress:
   - to:
+    - podSelector: 
+        matchLabels:
+          name: main-chart
     - ipBlock:
-        cidr: 0.0.0.0/0
-        except:
-        - 10.12.0.0/20
+        cidr: 10.12.0.0/20
   ingress:
   - from:
+    - podSelector: 
+        matchLabels:
+          name: main-chart
     - ipBlock:
-        cidr: 0.0.0.0/0
-        except:
-        - 10.12.13.40/32
-        - 10.12.13.43/32
-        - 10.12.13.44/32
+        cidr: 10.12.0.0/20
