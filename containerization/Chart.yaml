@@ -33,6 +33,3 @@ dependencies:
   - name: auth
     version: 0.1.0
     repository: "file://charts/auth"
-  - name: main-canary
-    version: 0.1.0
-    repository: "file://charts/main-canary"
