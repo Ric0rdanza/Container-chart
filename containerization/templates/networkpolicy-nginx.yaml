@@ -4,7 +4,8 @@ metadata:
   name: open-public-nginx
 spec:
   podSelector: 
-    matchLabels: server-chart
+    matchLabels: 
+      name: server-chart
   policyTypes:
   - Egress
   - Ingress
