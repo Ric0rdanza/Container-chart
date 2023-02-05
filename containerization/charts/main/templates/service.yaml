@@ -4,7 +4,8 @@ metadata:
   name: {{ include "main.fullname" . }}
 spec:
   sessionAffinity: {{ .Values.sessionAffinity }}
-  selector: {{- include "main.selectorLabels" . | nindent 8 }}
+  selector: 
+    app: main-chart
   type: {{ .Values.service.type }}
   clusterIP: {{ .Values.service.clusterIP }}
   ports:

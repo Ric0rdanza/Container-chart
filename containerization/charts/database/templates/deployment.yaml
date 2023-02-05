@@ -5,10 +5,12 @@ metadata:
 spec: 
   replicas: {{ .Values.replicaCount }}
   selector: 
-    matchLabels: {{- include "database.selectorLabels" . | nindent 6 }}
+    matchLabels:
+      app: db-chart
   template: 
     metadata: 
-      labels: {{- include "database.selectorLabels" . | nindent 8 }}
+      labels: 
+        app: db-chart
     spec: 
       containers: 
         - name: {{ .Chart.Name }}

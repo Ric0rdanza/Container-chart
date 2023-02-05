@@ -7,10 +7,12 @@ spec:
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
-    matchLabels: {{- include "containerization.selectorLabels" . | nindent 6 }}
+    matchLabels: 
+      app: nginx-chart
   template:
     metadata:
-      labels: {{- include "containerization.selectorLabels" . | nindent 8 }}
+      labels: 
+        app: nginx-chart
     spec:
       containers:
         - name: {{ .Chart.Name }}
