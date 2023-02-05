@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector: 
     matchLabels:
-      name: auth-chart
+      app: auth-chart
   template:
     metadata:
       labels: 
-        name: auth-chart
+        app: auth-chart
     spec:
       containers:
         - name: {{ .Chart.Name }}

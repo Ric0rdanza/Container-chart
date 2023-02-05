@@ -5,7 +5,7 @@ metadata:
 spec:
   sessionAffinity: {{ .Values.sessionAffinity }}
   selector: 
-    name: auth-chart
+    app: auth-chart
   type: {{ .Values.service.type }}
   clusterIP: {{ .Values.service.clusterIP }}
   ports:
