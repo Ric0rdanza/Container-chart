@@ -40,18 +40,11 @@ securityContext: {}
 
 service:
   name: https
-  type: LoadBalancer
+  type: ClusterIP
   protocol: TCP
   port: 443
   tport: 443
   clusterIP: 10.12.13.40
-
-
-volume:
-  name: demoapi-secret
-  mountPath: /opt/certs
-  readOnly: true
-  secretName: temp-demoapi-tls-secret
 
 ingress:
   enabled: false

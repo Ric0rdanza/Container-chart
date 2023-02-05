@@ -8,25 +8,25 @@ spec:
   {{- end }}
   selector:
     matchLabels: 
-      app: {{ .Values.app }}
+      app: nginx-chart
   template:
     metadata:
       labels: 
-        app: {{ .Values.app }}
+        app: nginx-chart
     spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: {{ .Values.service.name }}
+            - name: https
               containerPort: {{ .Values.service.port }}
-              protocol: {{ .Values.service.protocol }}
+              protocol: TCP
           volumeMounts:
-            - name: {{ .Values.volume.name }}
-              mountPath: {{ .Values.volume.mountPath }}
-              readOnly: {{ .Values.volume.readOnly }}
+            - name: demoapi-secret
+              mountPath: /opt/certs
+              readOnly: true
       volumes:
-        - name: {{ .Values.volume.name }}
+        - name: demoapi-secret
           secret:
-            secretName: {{ .Values.volume.secretName }}
+            secretName: temp-demoapi-tls-secret
