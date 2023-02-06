@@ -39,5 +39,8 @@ Use `helm uninstall <chart-name>` to uninstall the chart.
 ## Network Policy
 1. For pods running database, auth and main, only allow traffic within pods pools, deny all other traffic.
 2. For pods running nginx, allow all traffic from inside and outside the cluster.
+## Horizontal Pod Autoscaler
+1. Default replica count is 1, and the maximum is 3.
+2. The CPU utilization is set to 80% in three sub charts, database, auth and main. The CPU utilization set to 20% in main chart.
 
 
