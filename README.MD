@@ -2,6 +2,8 @@
 
 A demo of this deployment is at `34.78.68.26`, set your hosts with hostname `my.container.local` to this IP address. Use `https://my.container.local` to access the website.
 
+This README.MD is a guide to deploy this chart to GKE. The repository is at https://github.com/Ric0rdanza/Container-chart.
+
 ## Prerequisites
 
 1. Install `cert-manager` in the Cluster
